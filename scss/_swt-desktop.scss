@@ -1,0 +1,198 @@
+@mixin  desktop-v {
+
+
+    *, *:before, *:after {   /* IMPRESINDIBLE */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: inherit;
+    }
+
+
+    html {
+        background-color: #efefef;
+        height: 100vh;
+        
+        /* Incluye el contenido, padding y border dentro del 
+        total del ancho del elemento pero no el margin*/
+
+        box-sizing: border-box;
+        font-family: 'Comic Neue', cursive;
+        font-size: 2vh;
+        color: #000;
+        overflow: hidden;
+    }
+
+
+  /*************************/
+  /*       PRELOADER        */
+  /*************************/
+  #contenedor_carga{
+    background-color: rgba(250, 250, 245, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transform: all 1s easy;
+    transform: all 1s easy;
+    -o-transition: all 1s easy;
+    transition: all 1s easy;
+    z-index: 10000;
+  }
+  
+  #carga{
+    border: 15px solid #ccc;
+    border-top-color: #113743;
+    border-top-style:solid;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+  
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+  }
+  
+  @keyframes girar {
+    from { transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+  
+  /* -----   COPYRIGHT ----- */
+  #copyright{
+      position:absolute;
+      top:200px;
+      left:0;
+      width: fit-content;
+      background-color: white;
+      color:black;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      z-index: 9999;
+      >a {
+         text-decoration: none; 
+      }
+  }
+
+
+/* ------------  SEPARADORES  ----------  */
+
+  video.fullscreen {
+        position: absolute;
+        z-index: 0;
+        object-fit: cover;
+        width:100%;
+        height:100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &::-webkit-media-controls {
+        display:none !important;
+        }
+   }
+
+    img{    /* IMPRESINDIBLE */
+        background-size: cover; 
+        height: 100vh;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+
+    }
+
+    /* ------------  WEB-CONTAINER --------------------*/
+
+    .web-flex-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        position:relative;
+
+    }
+
+    /* ------------    ERA SECTION --------------------*/
+
+    .era-section {
+        padding:20px;
+        height: 1000px;
+        min-width:1000px;
+        background-color: rgb(194, 187, 187);
+    }
+
+    /* ------------  TIMELINE SECTION --------------------*/
+
+    #timeline-container{
+        position: absolute;
+        top:50vh;
+        height: 100px;
+        width: 4000px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+
+    }
+    .timeline-line {
+        height: 15px;
+        width: 4000px;
+        background-color: #eeec6f;;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        border: 1px solid black;
+    }
+
+    .bola {
+        background-color: #eeec6f;
+        border-radius: 100%;
+        position:relative;
+        
+    }
+
+    .bola-big{
+        height: 40px;
+        width: 40px;
+        border: 2px solid rgb(203, 206, 26);
+        margin-left: 60px;
+        
+    }
+    .bola-small {
+        height: 20px;
+        width: 20px;
+        border: 1px solid rgb(203, 206, 26);
+        margin-left: 30px;
+    }
+
+    .texto {
+      white-space: nowrap;
+      -webkit-transform: rotate(-45deg); 
+      -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+      -o-transform: rotate(-45deg); 
+      transform: rotate(-45deg); 
+      
+      -webkit-transform-origin: 50% 50%; 
+      -moz-transform-origin: 50% 50%; 
+      -ms-transform-origin: 50% 50%; 
+      -o-transform-origin: 50% 50%; 
+      transform-origin: 50% 50%; 
+    }
+
+    .bola-big .texto{
+        position:absolute;
+        top:-52px;
+        left:-4px;
+    }
+
+    .bola-small .texto{
+        position:absolute;
+        top:-70px;
+        left:-9px;
+    }
+
+} /* --- FIN DEL MIXIN   ---*/

@@ -5,8 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars Timeline</title>
+
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+     <!-- Animate CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+     <!-- myCSS -->
+     <link rel="stylesheet" href="css/swTimeline.css">
 </head>
-<body>
+<body onload="preloader()">
+ 
+    <!--   --- PRELOADER ----- -->
+    <div id="contenedor_carga">
+        <div id="carga"></div>
+    </div>
+
+
+        <div id="web-container" class="web-flex-wrapper">
+            <div class="era-1 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-2 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-3 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-4 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-5 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-6 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-7 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-8 era-section">HOLA GARIBOLA eres un bola</div>
+            <div class="era-9 era-section">HOLA GARIBOLA eres un bola</div>
+            
+
+            <div id="timeline-container">
+                <div class="timeline-line">
+
+                        <div class="era-1 bola bola-big">
+                            <p class="texto">MANOLITA CHEN</p>
+                        </div>
+                        <div class="era-1 bola bola-small">
+                            <p class="texto">MANOLITA CHEN cabron</p>
+                        </div>
+                        <div class="era-1 bola bola-big">
+                            <p class="texto">MANOLITA CHEN</p>
+                        </div>
+                        <div class="era-1 bola bola-small">
+                            <p class="texto">MANOLITA CHEN cabron</p>
+                        </div>
+                        <div class="era-1 bola bola-big">
+                            <p class="texto">MANOLITA CHEN</p>
+                        </div>
+                        <div class="era-1 bola bola-small">
+                            <p class="texto">MANOLITA CHEN cabron</p>
+                        </div>
+                        <div class="era-1 bola bola-big">
+                            <p class="texto">MANOLITA CHEN</p>
+                        </div>
+                        <div class="era-1 bola bola-small">
+                            <p class="texto">MANOLITA CHEN cabron</p>
+                        </div>
+                </div>
+
+            </div>
+
+        </div> <!-- FIN WEB- CONTAINER -->
+
     
+    <!-- SCRIPTS-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/visibilityEvents.min.js"></script>
+    <script type="text/javascript" src="js/starwars-timeline.js"></script>
+    <script>
+        function preloader() {
+            // Esto es para manekar el Preloader
+            var contenedor = document.getElementById('contenedor_carga');
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = '0';
+        }
+    </script>
+    <script>
+        getinScreen()
+    </script>
 </body>
 </html>
